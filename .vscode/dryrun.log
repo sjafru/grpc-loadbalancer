@@ -1,0 +1,4 @@
+make: Entering directory `/Users/afandy/Downloads/nginx-api-gateway-grpc'
+docker build -t afandy/helloworld:dev . -f helloworld.Dockerfile
+make: Leaving directory `/Users/afandy/Downloads/nginx-api-gateway-grpc'
+ 
