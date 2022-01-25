@@ -6,5 +6,5 @@ FROM nginx:1.18.0
 
 RUN chmod -R 755 /var/log/nginx
 
-COPY conf/grpc_gateway.conf /etc/nginx/conf.d/
+COPY conf/grpc_gateway.okd-afandy-local.conf /etc/nginx/conf.d/
 COPY conf/errors.grpc_conf /etc/nginx/conf.d/
