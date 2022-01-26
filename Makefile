@@ -1,8 +1,8 @@
 build_helloworld:
-	docker build -t afandy/helloworld:dev . -f helloworld.Dockerfile
+	docker build -t afandy/helloworld:latest . -f helloworld.Dockerfile
 
 build_routeguide:
-	docker build -t afandy/routeguide:dev . -f routeguide.Dockerfile
+	docker build -t afandy/routeguide:latest . -f routeguide.Dockerfile
 
 build_grpclb:
 	docker build -t afandy/grpc-lb:latest . -f grpclb.Dockerfile
@@ -14,7 +14,7 @@ app_lb:
 	oc new-app --docker-image=afandy/grpc-lb:latest --name=grpc-lb
 
 app_rg1:
-	oc new-app --docker-image=afandy/routeguide:dev --name=rg1
+	oc new-app --docker-image=afandy/routeguide:latest --name=rg1
 
 app_hw1:
-	oc new-app --docker-image=afandy/helloworld:dev --name=hw1
+	oc new-app --docker-image=afandy/helloworld:latest --name=hw1
