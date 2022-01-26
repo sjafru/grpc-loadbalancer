@@ -14,7 +14,7 @@ gen_key:
 	openssl req -newkey rsa:4096 -nodes -keyout ssl/private/grpc.example.com.key -x509 -days 365 -out ssl/certs/grpc.example.com.crt
 
 app_lb:
-	oc new-app --docker-image=afandy/grpc-example-gateway:latest --name=grpc-lb
+	oc new-app --docker-image=afandy/grpc-example-gateway:latest --name=grpc-gateway
 
 app_rg1:
 	oc new-app --docker-image=afandy/grpc-example-routeguide:latest --name=rg1
