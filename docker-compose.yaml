@@ -6,7 +6,7 @@ services:
     container_name: webserver
     restart: unless-stopped
     ports:
-      - 80:50051
+      - 80:30051
       - 443:443
     volumes:
       - ./conf/grpc_gateway.conf:/etc/nginx/conf.d/grpc_gateway.conf
@@ -36,5 +36,11 @@ services:
     ports:
       - 20002:50051
 
+  haproxy:
+    image: haproxy:1.9.2
+    volumes:
+        - "./conf/haproxy.sandy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro"
+    ports:
+        - "81:3001"
 
 
